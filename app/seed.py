@@ -25,8 +25,10 @@ with engine.begin() as conn:
     """))
     now = datetime.utcnow()
     for i in range(20):
-        sensor_id, unit, low, high in_ = SENSORS[i % len(SENSORS)][0], SENSORS[i % len(SENSORS)][1], SENSORS[i % len(SENSORS)][2], SENSORS[i % len(SENSORS)][3]
-        value = round(random.uniform(low, in_), 2)
+
+        sensor_id, unit, low, high = SENSORS[i % len(SENSORS)]
+        value = round(random.uniform(low, high), 2)
+
         conn.execute(
             text("INSERT INTO readings (sensor_id, value, unit, recorded_at) VALUES (:s, :v, :u, :t)"),
             {"s": sensor_id, "v": value, "u": unit, "t": now - timedelta(minutes=i*5)}
