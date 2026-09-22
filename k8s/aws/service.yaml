@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ogplatform-service
+  namespace: ogplatform
+spec:
+  selector:
+    app: ogplatform-app
+  ports:
+    - port: 80
+      targetPort: 8000
+  type: ClusterIP
