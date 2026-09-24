@@ -1,5 +1,5 @@
 variable "location" {
-  default = "northeurope"
+  default = "eastus"
 }
 
 variable "project_name" {
