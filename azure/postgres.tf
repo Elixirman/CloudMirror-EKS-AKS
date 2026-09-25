@@ -6,7 +6,7 @@ resource "random_password" "azure_db" {
 resource "azurerm_postgresql_flexible_server" "this" {
   name                   = "${var.project_name}-pg"
   resource_group_name    = azurerm_resource_group.this.name
-  location               = azurerm_resource_group.this.location
+  location               = "westus2"
   version                = "16"
   administrator_login    = "appuser"
   administrator_password = random_password.azure_db.result

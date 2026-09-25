@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ogplatform-app
+  namespace: ogplatform
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ogplatform-app
+  template:
+    metadata:
+      labels:
+        app: ogplatform-app
+    spec:
+      containers:
+        - name: app
+          image: ogplatformacr21244.azurecr.io/ogplatform-app:v1
+          ports:
+            - containerPort: 8000
+          env:
+            - name: CLOUD_PROVIDER
+              value: "azure"
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: db-secret
+                  key: DATABASE_URL
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 15
