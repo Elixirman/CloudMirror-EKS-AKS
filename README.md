@@ -4,7 +4,7 @@ A scalable, cloud-native Python web application deployed independently on **both
 
 This isn't a copy-paste tutorial project. Both cloud accounts had real, undocumented restrictions (instance-type limits, quota walls, region-specific service availability) that had to be diagnosed and worked around live. Every command, file, and error below is from the actual build — see [`index.html`](./index.html) for the full step-by-step log with every manifest and script included.
 
-**Live write-up:** [GitHub Pages walkthrough](./index.html) — toggle between the full AWS and Azure build logs, including every file and every fix.
+**Live write-up:** [GitHub Pages walkthrough](https://elixirman.github.io/CloudMirror-EKS-AKS/) — toggle between the full AWS and Azure build logs, including every file and every fix.
 
 ---
 
