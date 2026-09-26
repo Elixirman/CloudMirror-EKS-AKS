@@ -10,3 +10,4 @@ crash.log
 # Python
 __pycache__/
 venv/
+tfplan
