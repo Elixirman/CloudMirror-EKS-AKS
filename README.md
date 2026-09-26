@@ -57,7 +57,7 @@ Python (FastAPI) · Docker · Kubernetes (EKS + AKS) · Terraform · PostgreSQL 
 
 Before touching any cloud resource, the app was built and verified locally with Docker Compose — FastAPI + Postgres, seeded with 20 sample oil &amp; gas sensor readings (pressure, temperature, flow rate, vibration), served through a styled dashboard.
 
-![Local dashboard test](docs/screenshots/azure/1-loacl-test-dash.png)
+![Local dashboard test](docs/screenshots/aws/1-app-sensor-readings.png)
 *The dashboard running locally, before any cloud infrastructure existed — confirming the app, database schema, and seed data all worked end to end.*
 
 ---
@@ -169,7 +169,7 @@ kubectl get service --namespace ingress-nginx ingress-nginx-controller
 curl http://<external-ip>/health
 ```
 
-![App live on Azure](docs/screenshots/azure/7-app-live-on-AZ.png)
+![App live on Azure](docs/screenshots/azure/7-app-live-on AZ.png)
 *The dashboard, publicly reachable through the Azure Load Balancer provisioned by the NGINX Ingress controller — blue Azure badge confirming which cloud it's serving from.*
 
 ### What broke on Azure
