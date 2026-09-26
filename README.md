@@ -169,7 +169,7 @@ kubectl get service --namespace ingress-nginx ingress-nginx-controller
 curl http://<external-ip>/health
 ```
 
-![App live on Azure](docs/screenshots/azure/7-app-live-on AZ.png)
+![App live on Azure](docs/screenshots/azure/7-app-live-on%20AZ.png)
 
 *The dashboard, publicly reachable through the Azure Load Balancer provisioned by the NGINX Ingress controller — blue Azure badge confirming which cloud it's serving from.*
 
