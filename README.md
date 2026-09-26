@@ -28,6 +28,8 @@ VPC (10.0.0.0/16)                      Resource group (ogplatform-rg)
  └─ ALB via aws-load-balancer-          └─ NGINX Ingress → public IP
      -controller → public URL
 ```
+![Architecture](architecture-diagram.svg)
+
 
 ## Stack
 
@@ -50,7 +52,7 @@ Python (FastAPI) · Docker · Kubernetes (EKS + AKS) · Terraform · PostgreSQL 
 ├── index.html              # full build log with every file + command
 └── README.md
 ```
-![Architecture](architecture-diagram.svg)
+
 ---
 
 ## Local proof of concept
