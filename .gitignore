@@ -11,3 +11,7 @@ crash.log
 __pycache__/
 venv/
 tfplan
+*.zip
+*.zip
+k8s/aws/secret.yaml
+k8s/azure/secret.yaml
